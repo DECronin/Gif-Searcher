@@ -5,9 +5,12 @@ input {
     margin: 10px;
 }
 .tile{
-    width: 35vw;
-    margin: 10px auto;
+    margin: 20px;
     text-align: center;
-    border: none;
     float: left;
+    padding: 10px;
+    overflow: auto;
 }
+/* img{
+    
+} */

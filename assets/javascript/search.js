@@ -36,8 +36,8 @@ $(document).ready(function () {
                 newDiv.addClass("tile");
                 newDiv.append("Rating: " + response.data[i].rating);
                 newDiv.append("<br>Title: " + response.data[i].title);
+                newDiv.append("<br>Source: " + response.data[i].source_tld);
                 newDiv.append("<br><img src='" + response.data[i].images.fixed_height.url + "'>'");
-                // newDiv.append("Tags: " + response.data[i].);
                 $("#gif-view").append(newDiv);
             }
         });

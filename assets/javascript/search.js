@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var pauseGif;
     var key = 'oZgwe4apLj3XHqjHaMm6Um0A83PrrDDI';
     var topics = ['Animals', 'Puppies', 'Kittens', 'Foxes', 'Fish', 'Snakes', 'Owls'];
     //==============================================================
@@ -23,19 +24,27 @@ $(document).ready(function () {
       return str
     }
     function searchGifs(search){
-        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + search + "&limit=10&offset=0";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + key + "&q=" + search;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function(response){
             pageDisplay();
             console.log(response);
-            $("#gif-view").html(JSON.stringify(response));
+            for(i=0; i < 10; i++){
+                var newDiv = $("<span>");
+                newDiv.addClass("tile");
+                newDiv.append("Rating: " + response.data[i].rating);
+                newDiv.append("<br>Title: " + response.data[i].title);
+                newDiv.append("<br><img src='" + response.data[i].images.fixed_height.url + "'>'");
+                // newDiv.append("Tags: " + response.data[i].);
+                $("#gif-view").append(newDiv);
+            }
         });
     }
     function pageDisplay(){
         $("#gif-view").empty();
-
+                                //"&limit=10&offset=0"
     }
     //==============================================================
     $("#add-search").on("click", function(event) {
@@ -52,6 +61,13 @@ $(document).ready(function () {
         event.preventDefault();
         var search = $(this).attr('data-name');
         searchGifs(search);
+    });
+    $(document).on('click', '.tile', function(){
+        if (pauseGif){
+            pauseGif = false;
+        } else {
+            pauseGif = true;
+        }
     });
     //==============================================================
     pageDisplay();

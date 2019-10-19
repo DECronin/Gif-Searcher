@@ -30,20 +30,21 @@ $(document).ready(function () {
             method: "GET"
         }).then(function(response){
             pageDisplay();
-            console.log(response);
             for(i=0; i < 10; i++){
                 var newDiv = $("<span>");
+                var newImg = $('<br><img>');
+                newImg.attr('id', 'gif-result');
+                newImg.attr('data-animate', response.data[i].images.fixed_height.url);
+                newImg.attr('data-still', response.data[i].images.fixed_height_still.url);
+                newImg.attr('data-state', 'still');
+                newImg.attr('src', newImg.attr('data-still'));
+                newDiv.append(newImg)
                 newDiv.addClass("tile");
                 newDiv.append("Rating: " + response.data[i].rating);
                 newDiv.append("<br>Title: " + response.data[i].title);
-                newDiv.append("<br>Source: " + response.data[i].source_tld);
-                newDiv.attr('data-animate', response.data[i].images.fixed_height.url);
-                newDiv.attr('data-still', response.data[i].images.fixed_height_still.url);
-                newDiv.attr('data-state', 'still');
-                newDiv.append('<br><img>');
-                $('<img>').attr('src', newImg.attr('data-still'));
+                newDiv.append("<br>Source: " + response.data[i].source_tld);;
                 $("#gif-view").append(newDiv);
-            } //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+            }
         });
     }
     function pageDisplay(){
@@ -66,21 +67,18 @@ $(document).ready(function () {
         var search = $(this).attr('data-name');
         searchGifs(search);
     });
-    $(document).on('click', '.tile', function(){
+    $(document).on('click', '#gif-result', function(){
         event.preventDefault();
         var state = $(this).attr('data-state');
-        console.log(this);
-        console.log($(this));
-        console.log(state);
         switch(state){
             case 'still':
-                console.log('still');
                 $(this).attr('src', $(this).attr('data-animate'));
                 $(this).attr('data-state', 'animate');
+                break;
             case 'animate':
-                console.log('move');
                 $(this).attr('src', $(this).attr('data-still'));
                 $(this).attr('data-state', 'still');
+                break;
         }
     });
     //==============================================================
@@ -91,21 +89,22 @@ $(document).ready(function () {
 
 ////============================= Notes ============================////
 
-// 10 gifs on page
- /// originally static 
- /// click to make move
- /// click again to return to static
- //===// Under every gif, display its rating (PG, G, so on)
+// 10 gifs on page <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check
+ /// originally static <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check
+ /// click to make move <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check
+ /// click again to return to static <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check
+ //===// Under every gif, display its rating (PG, G, so on) <<<<<<<<<<<<<<<<<<< check
 
-// array of topics
+// array of topics <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check (change later?)
 
-// buttons pull up gifs
+// buttons pull up gifs <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< check
 
-// input for search bar to add button to topics array
+// input for search bar to add button to topics array <<<<<<<<<<<<<<<<<<<<<<<<< check
 
+// style
 // deploy live on github pages // portfolio and readMe
 
 // Bonus : Mobile Responsive
 //         More than 10 gif if requested (pages w/ 10 gifs at a time) ~~~~~~~~~~~ var page //pull to display gifs prevPage#()*10 through thisPage#()*10
-//         List additional metadata (title, tags, etc) for each gif in a clean and readable format
+//         List additional metadata (title, tags, etc) for each gif in a clean and readable format <<<<<< check >>>>>>>
 //         Allow users to add their favorite gifs to a favorites section (((((look into cookies)))))

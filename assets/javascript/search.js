@@ -37,9 +37,13 @@ $(document).ready(function () {
                 newDiv.append("Rating: " + response.data[i].rating);
                 newDiv.append("<br>Title: " + response.data[i].title);
                 newDiv.append("<br>Source: " + response.data[i].source_tld);
-                newDiv.append("<br><img src='" + response.data[i].images.fixed_height.url + "'>'");
+                newDiv.attr('data-animate', response.data[i].images.fixed_height.url);
+                newDiv.attr('data-still', response.data[i].images.fixed_height_still.url);
+                newDiv.attr('data-state', 'still');
+                newDiv.append('<br><img>');
+                newDiv.attr('src', newImg.attr('data-still'));
                 $("#gif-view").append(newDiv);
-            }
+            } //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         });
     }
     function pageDisplay(){
@@ -63,10 +67,19 @@ $(document).ready(function () {
         searchGifs(search);
     });
     $(document).on('click', '.tile', function(){
-        if (pauseGif){
-            pauseGif = false;
-        } else {
-            pauseGif = true;
+        var state = $(this).attr('data-state');
+        console.log(this);
+        console.log($(this));
+        console.log(state);
+        switch(state){
+            case 'still':
+                console.log('still');
+                $(this).attr('src', $(this).attr('data-animate'));
+                $(this).attr('data-state', 'animate');
+            case 'animate':
+                console.log('move');
+                $(this).attr('src', $(this).attr('data-still'));
+                $(this).attr('data-state', 'still');
         }
     });
     //==============================================================

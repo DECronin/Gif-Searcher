@@ -41,7 +41,7 @@ $(document).ready(function () {
                 newDiv.attr('data-still', response.data[i].images.fixed_height_still.url);
                 newDiv.attr('data-state', 'still');
                 newDiv.append('<br><img>');
-                newDiv.attr('src', newImg.attr('data-still'));
+                $('<img>').attr('src', newImg.attr('data-still'));
                 $("#gif-view").append(newDiv);
             } //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         });
@@ -67,6 +67,7 @@ $(document).ready(function () {
         searchGifs(search);
     });
     $(document).on('click', '.tile', function(){
+        event.preventDefault();
         var state = $(this).attr('data-state');
         console.log(this);
         console.log($(this));

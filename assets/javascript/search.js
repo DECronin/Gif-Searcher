@@ -32,15 +32,15 @@ $(document).ready(function () {
             pageDisplay();
             for(i=0; i < 10; i++){
                 var newDiv = $("<span>");
-                var newImg = $('<br><img>');
+                var newImg = $('<img>');
                 newImg.attr('id', 'gif-result');
                 newImg.attr('data-animate', response.data[i].images.fixed_height.url);
                 newImg.attr('data-still', response.data[i].images.fixed_height_still.url);
                 newImg.attr('data-state', 'still');
                 newImg.attr('src', newImg.attr('data-still'));
                 newDiv.append(newImg)
-                newDiv.addClass("tile");
-                newDiv.append("Rating: " + response.data[i].rating);
+                newDiv.addClass("tile col-4");
+                newDiv.append("<br> Rating: " + response.data[i].rating);
                 newDiv.append("<br>Title: " + response.data[i].title);
                 newDiv.append("<br>Source: " + response.data[i].source_tld);;
                 $("#gif-view").append(newDiv);

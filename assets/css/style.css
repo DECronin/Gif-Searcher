@@ -6,6 +6,7 @@ body{
     background-color:#93fa85;
     background-size: 128px 128px;
     font-weight: bold;
+    font-family: 'Kaushan Script', cursive;
 }
 form,
 input {
@@ -24,14 +25,14 @@ input {
     padding-left: 225px;
     color: rgba(255, 236, 172, 0.9);
     text-shadow: 
-    4px 4px 0px rgb(65, 83, 35),
-    4px -4px 0px rgb(65, 83, 35) ,
-    -4px -4px 0px rgb(65, 83, 35),
-    -4px 4px 0px rgb(65, 83, 35),
-    0px 5px 0px rgb(65, 83, 35),
-    0px -5px 0px rgb(65, 83, 35),
-    -5px 0px 0px rgb(65, 83, 35),
-    5px 0px 0px rgb(65, 83, 35);
+    3px 3px 0px rgb(65, 83, 35),
+    3px -3px 0px rgb(65, 83, 35) ,
+    -3px -3px 0px rgb(65, 83, 35),
+    -3px 3px 0px rgb(65, 83, 35),
+    1px 4px 0px rgb(65, 83, 35),
+    1px -4px 0px rgb(65, 83, 35),
+    -4px 0px 0px rgb(65, 83, 35),
+    4px 0px 0px rgb(65, 83, 35);
 }
 h1{
     font-size: 60px;

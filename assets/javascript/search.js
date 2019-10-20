@@ -8,7 +8,7 @@ $(document).ready(function () {
         for (i = 0; i < topics.length; i++){
             var newButton = $("<button>");
             upperCase(topics[i]);
-            newButton.addClass("gif-search");
+            newButton.addClass("gif-search col-5");
             newButton.attr("data-name", topics[i]);
             newButton.html(topics[i]);
             $("#buttons-view").append(newButton);
@@ -39,7 +39,7 @@ $(document).ready(function () {
                 newImg.attr('data-state', 'still');
                 newImg.attr('src', newImg.attr('data-still'));
                 newDiv.append(newImg)
-                newDiv.addClass("tile col-4");
+                newDiv.addClass("tile col-6");
                 newDiv.append("<br> Rating: " + response.data[i].rating);
                 newDiv.append("<br>Title: " + response.data[i].title);
                 newDiv.append("<br>Source: " + response.data[i].source_tld);;

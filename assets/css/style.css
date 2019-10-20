@@ -7,6 +7,7 @@ body{
     background-size: 128px 128px;
     font-weight: bold;
     font-family: 'Kaushan Script', cursive;
+    padding: 10px 200px;
 }
 form,
 input {
@@ -40,6 +41,7 @@ h1{
 #sidebar{
     background-color: hsl(16, 100%, 66%, 0.65);
     padding: 20px;
+    text-align: center;
 }
 .col-8{
     background-color: rgb(47, 79, 63, 0.65);
@@ -51,7 +53,7 @@ button, #add-search{
     background-color: rgb(112, 112, 3, 0.7);
     height: 45px;
     border: outset rgba(135, 158, 96, 0.8);
-    margin: 10px;
+    margin: 7px;
 }
 label{
     font-weight: bolder;
@@ -76,10 +78,26 @@ button:hover,
     cursor: none;
     text-shadow: -2px 2px 0px rgb(137, 111, 170);
 }
-@media screen and (max-width: 1200px){
-
+/* @media screen and (max-width: 1200px){
+    .gif-search{
+        float: center;
+    }
+    button{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 980px){
+    #header{
+        padding-left: 5px;
+    }
+    body{
+        padding: 20px;
+    }
 }
 @media screen and (max-width: 768px){
+    h1{
+        font-size: 35px;
+    }
 }
 @media screen and (max-width: 640px){
-}
+} */

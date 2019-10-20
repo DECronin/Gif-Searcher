@@ -1,16 +1,33 @@
 button,
-div,
 form,
 input {
     margin: 10px;
 }
 .tile{
-    margin: 20px;
     text-align: center;
     float: left;
     padding: 10px;
     overflow: auto;
 }
-/* img{
-    
-} */
+body{
+    background:
+    linear-gradient(45deg, #347a62 45px, transparent 45px)64px 64px,
+    linear-gradient(45deg, #347a62 45px, transparent 45px,transparent 91px, #93fa85 91px, #93fa85 135px, transparent 135px),
+    linear-gradient(-45deg, #347a62 23px, transparent 23px, transparent 68px,#347a62 68px,#347a62 113px,transparent 113px,transparent 158px,#347a62 158px);
+    background-color:#93fa85;
+    background-size: 128px 128px;
+    font-weight: bold;
+}
+.container{
+    text-align: center;;
+}
+#header{
+    margin: 15px auto;
+    padding-left: 275px;
+}
+.col-3{
+    background-color: hsl(16, 100%, 66%, 0.65);
+}
+.col-8{
+    background-color: rgb(47, 79, 63, 0.65);
+}

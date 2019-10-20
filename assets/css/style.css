@@ -76,3 +76,10 @@ button:hover,
     cursor: none;
     text-shadow: -2px 2px 0px rgb(137, 111, 170);
 }
+@media screen and (max-width: 1200px){
+
+}
+@media screen and (max-width: 768px){
+}
+@media screen and (max-width: 640px){
+}

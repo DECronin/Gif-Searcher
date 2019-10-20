@@ -7,24 +7,29 @@
   <title>Gif Homework</title>
   <script src="./assets/javascript/search.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Gif Search</h1>
-    <div id="buttons-view"></div>
-
-    <form id="gif-form">
-      <label for="gif-input">Gif Searches</label>
-      <input type="text" id="gif-input"><br>
-
-      <input id="add-search" type="submit" value="Gif Searches">
-    </form>
-    
-    <div id="gif-view"></div>
- 
+<div class="container">
+  <div class="row" id="header">
+        <h1>Gif Search</h1> 
   </div>
+  <div class="row">
+    <div class="col-8" id="gif-view"></div>
+    <div class="col-1"></div>
+    <div class="col-3" id="sidebar">
+      <div id="buttons-view"></div>
+      <form id="gif-form">
+        <label for="gif-input">Search Giphy.com:</label>
+        <input type="text" id="gif-input"><br>
+        <input id="add-search" type="submit" value="Search">
+      </form>
+      <!-- <div id="favorites">Favorites:</div> -->
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

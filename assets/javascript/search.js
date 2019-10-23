@@ -8,7 +8,7 @@ $(document).ready(function () {
         for (i = 0; i < topics.length; i++){
             var newButton = $("<button>");
             upperCase(topics[i]);
-            newButton.addClass("gif-search col-5");
+            newButton.addClass("gif-search col-5 btn btn-secondary");
             newButton.attr("data-name", topics[i]);
             newButton.html(topics[i]);
             $("#buttons-view").append(newButton);

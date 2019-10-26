@@ -76,7 +76,7 @@ button:hover,
     color: rgb(59, 52, 59);
     cursor: none;
     text-shadow: -2px 2px 0px rgb(137, 111, 170);
-} @media screen and (max-width: 1200px){
+} @media screen and (max-width: 1200px){/*can't seem to apropriatly view media responsiveness with chrome at the moment*/
     .gif-search{
         float: center;
     }
@@ -93,13 +93,13 @@ button:hover,
     }
 }
 @media screen and (max-width: 768px){
-    /* h1{
-        font-size: 35px;
-    } */
     body{
         background-color: tomato;
     }
 }
-/*
+
 @media screen and (max-width: 640px){
-} */
+    body{
+        background-color: black; /*can't seem to apropriatly view media responsiveness with chrome at the moment*/
+    }
+}

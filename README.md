@@ -7,7 +7,7 @@
 ~~->|<-~~ Coming Soon ~~->|<-~~
 
 ### Demonstration:
-~~->|<-~~ Coming Soon ~~->|<-~~
+![Demo Gif](./assets/images/demo-01.gif)
 
 ### Resources:
 - Giphy API

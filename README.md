@@ -18,5 +18,5 @@
 - JavaScript
 - Git
 
-### Development History (*?)
-~~->|<-~~ Coming Soon ~~->|<-~~
+<!-- ### Development History (*?)
+~~->|<-~~ Coming Soon ~~->|<-~~ -->

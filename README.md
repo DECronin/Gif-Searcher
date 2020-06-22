@@ -6,7 +6,7 @@
 ### How To Use :|: Navigation:
 ~~->|<-~~ Coming Soon ~~->|<-~~
 
-### Demonstration(s):
+### Demonstration:
 ~~->|<-~~ Coming Soon ~~->|<-~~
 
 ### Resources:
